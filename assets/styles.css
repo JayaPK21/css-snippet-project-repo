@@ -13,7 +13,53 @@ h1 {
     color: darkmagenta;
 }
 
+h2 {
+    background-color: #13293d;
+    color: ghostwhite;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 20px 20px 0px 0px;
+}
+
 header p {
     text-align: center;
     width: 80%;
+}
+
+.card {
+    background-color: navajowhite;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.card p {
+    margin: 10px;
+}
+
+#snippetCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+}
+
+pre {
+    white-space: pre-wrap;
+    line-height: 1.5em;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+#flexColumn pre {
+    padding: 30px 10px;
+}
+
+#linearGradient pre {
+    padding: 3em 10px;
+}
+
+#overlayCard pre {
+    padding: 5em 10px;
 }
