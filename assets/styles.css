@@ -11,6 +11,7 @@ header{
 h1 {
     margin-bottom: 0px;
     color: darkmagenta;
+    text-align: center;
 }
 
 h2 {
@@ -40,6 +41,32 @@ header p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1.5fr;
+    grid-template-areas: "flexRow flexColumn cssGrid"
+                            "linearGradient boxTransition overlayCard";
+}
+
+#flexRow {
+    grid-area: flexRow;
+}
+
+#flexColumn {
+    grid-area: flexColumn;
+}
+
+#cssGrid {
+    grid-area: cssGrid;
+}
+
+#linearGradient {
+    grid-area: linearGradient;
+}
+
+#boxTransition {
+    grid-area: boxTransition;
+}
+
+#overlayCard {
+    grid-area: overlayCard;
 }
 
 pre {
@@ -62,4 +89,37 @@ pre {
 
 #overlayCard pre {
     padding: 5em 10px;
+}
+
+@media screen and (max-width: 992px) {
+    #snippetCards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1.5fr 1.5fr;
+
+        grid-template-areas: "flexRow flexColumn"
+                            "cssGrid linearGradient"
+                            "boxTransition overlayCard";
+    }
+
+    header p {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #snippetCards {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1.5fr 1.5fr 1.5fr;
+
+        grid-template-areas: "flexRow"
+                            "flexColumn"
+                            "cssGrid"
+                            "linearGradient"
+                            "boxTransition"
+                            "overlayCard";
+    }
+
+    header p {
+        width: 90%;
+    }
 }
