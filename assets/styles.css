@@ -72,11 +72,22 @@ header p {
 pre {
     white-space: pre-wrap;
     line-height: 1.5em;
-    background-color: rebeccapurple;
+    background: linear-gradient(45deg, rebeccapurple 0%, #e670ab 100%);
     border-radius: 10px;
     color: white;
     padding: 10px;
     margin: 10px;
+}
+
+.card:hover,
+.card:hover pre {
+    box-shadow: inset 0px 0px 8px white, 0px 0px 15px black;
+}
+
+.card:hover h2 {
+    font-size: 1.8em;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
 }
 
 #flexColumn pre {
